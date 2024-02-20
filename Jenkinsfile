@@ -14,11 +14,7 @@ pipeline {
         cron '@midnight'
     }
     stages {
-        stage('Make executable') {
-            steps {
-                sh('chmod +x ./scripts/fibonacci.sh')
-            }
-        }
+        
         stage('Relative path') {
             steps {
                 sh("./scripts/fibonacci.sh ${env.NUMBER}")
