@@ -21,8 +21,6 @@ pipeline {
         }
         stage('Relative path') {
             steps {
-                dir
-                
                 bat("..\scripts\fibonacci.bat ${env.NUMBER}")
             }
         }
